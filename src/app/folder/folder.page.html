@@ -8,14 +8,147 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+    <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="text" required [(ngModel)]="todo.title" name="title" ngControl="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>GG Lavorabili/m</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>HH lavorabili/s</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>GG lavorabili/s</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>HH Lav/m</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>N° sett cassa/m</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>% Cassa/s
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>Tot. HH Cassa/m
+        m</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label>HH cassa/g</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM da cedolino</ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RAL
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label> RLM (12m) per cassa
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> Ret. Rifer. Cassa 100%
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> RLH
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Ret. 100% cassa 1
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Indennita h 1
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM Cassa 1
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM No Cassa 1
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM Cassa 1*
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> Ret. 100% cassa 2
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> Indennita h 2
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> Anno
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM Cassa 2
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM No Cassa 2
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label> RLM Cassa 2
+
+      </ion-label>
+      <ion-textarea [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+    </ion-item>
+
+
+
+
+    <button ion-button type="submit" block>Calcolo</button>
+  </form>
+
 </ion-content>
